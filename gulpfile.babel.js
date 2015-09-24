@@ -3,6 +3,7 @@ import gulpif from 'gulp-if';
 import sass from 'gulp-sass';
 import rename from 'gulp-rename';
 import uglify from 'gulp-uglify';
+import concat from 'gulp-concat';
 import minifyCSS from 'gulp-minify-css';
 import fs from 'fs';
 import del from 'del';
@@ -75,10 +76,18 @@ gulp.task('script', ['clean-script', 'data'], () => {
              .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('style', ['clean-style'], () => {
+gulp.task('scss', () => {
   return gulp.src('app/styles/index.scss')
              .pipe(sass())
-             .pipe(rename('bundle.css'))
+             .pipe(rename('all.css'))
+             .pipe(gulp.dest('/tmp'));
+});
+
+gulp.task('style', ['clean-style'], () => {
+  return gulp.src(['./node_modules/amazeui/dist/css/amazeui.css',
+                   './node_modules/highlight.js/styles/monokai_sublime.css',
+                   '/tmp/all.css'])
+             .pipe(concat('bundle.css'))
              .pipe(gulpif(isProduction, minifyCSS()))
              .pipe(gulp.dest('assets/css'));
 });
