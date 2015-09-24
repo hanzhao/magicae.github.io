@@ -4,9 +4,8 @@ class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <h1>
-          Magica @ Nya
-        </h1>
+        <title>Magica @ Nya</title>
+        <h1>Magica @ Nya</h1>
       </div>
     );
   }
