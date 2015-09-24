@@ -1,0 +1,49 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent": [2, 2],
+    "linebreak-style": [2,"unix"],
+    "max-len": [2, 80],
+    "no-console": [0],
+    "no-unused-vars": [1],
+    "quotes": [2,"single"],
+    "semi": [2,"always"],
+    "arrow-spacing": [2],
+    "react/jsx-uses-react": [2]
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "binaryLiterals": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": true,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "octalLiterals": true,
+    "regexUFlag": true,
+    "regexYFlag": true,
+    "restParams": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true,
+    "unicodeCodePointEscapes": true,
+    "jsx": true,
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "babel",
+    "react"
+  ]
+}

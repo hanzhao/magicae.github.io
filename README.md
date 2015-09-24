@@ -1,2 +1,2 @@
 # magicae.github.io
-Something static.
+Simple static personal site generator.
