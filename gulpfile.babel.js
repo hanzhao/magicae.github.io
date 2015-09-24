@@ -83,7 +83,7 @@ gulp.task('scss', () => {
              .pipe(gulp.dest('/tmp'));
 });
 
-gulp.task('style', ['clean-style'], () => {
+gulp.task('style', ['clean-style', 'scss'], () => {
   return gulp.src(['./node_modules/amazeui/dist/css/amazeui.css',
                    './node_modules/highlight.js/styles/monokai_sublime.css',
                    '/tmp/all.css'])
