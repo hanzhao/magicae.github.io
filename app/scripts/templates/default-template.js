@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'amazeui-react';
-import { Header, BreadNavigation } from '../components';
+import { Header, Footer, BreadNavigation } from '../components';
 
 class DefaultTemplate extends React.Component {
   constructor(props, context) {
@@ -12,6 +12,7 @@ class DefaultTemplate extends React.Component {
         <Header />
         <BreadNavigation />
         { this.props.children }
+        <Footer />
       </Container>
     );
   }

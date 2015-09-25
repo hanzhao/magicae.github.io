@@ -1,7 +1,8 @@
 export default {
   "pages": {
-    "JavaScript Tutorial": {
-      "1 - Types and Grammar.md": true
+    "ECMAScript Tutorial": {
+      "0 - Introduction.md": true,
+      "1 - Types.md": true
     }
   }
 };

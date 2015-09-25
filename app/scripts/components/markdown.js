@@ -27,7 +27,7 @@ class Markdown extends React.Component {
       let {response} = await qwest.get(this.props.src);
       this.setState({
         status: STATUS_SUCCESS,
-        html: marked(response).replace('<code class="', '<code class="hljs ')
+        html: marked(response).replace(/<code class="/g, '<code class="hljs ')
       });
     } catch (e) {
       this.setState({
