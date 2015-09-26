@@ -6,7 +6,9 @@ class Footer extends React.Component {
     return (
       <div className="footer">
         <div className="hosted-on">
-          Hosted on <a href="https://github.com"><Icon icon="github" /></a>.
+          Hosted on <a href="https://github.com/magicae/magicae.github.io">
+            <Icon icon="github" />
+          </a>.
         </div>
       </div>
     );
