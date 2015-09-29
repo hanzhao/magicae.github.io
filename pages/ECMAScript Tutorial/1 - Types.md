@@ -107,7 +107,7 @@ Math.abs(a - b) < Number.EPSILON; // true
 
 + NaN
 
-超越科学定义范围的数学运算返回 NaN。
+超越科学定义范围的数学运算返回 NaN（Not a Number）。
 
 ```js
 'use strict';
@@ -203,8 +203,9 @@ function plus(a, b) {
 }
 console.log(plus(1, 2));
 function multiplyGenerator(factor) {
+  var fact = factor;
   return function multiply(a, b) {
-    return a * b * factor;
+    return a * b * fact;
   }
 }
 let multiplySix = multiplyGenerator(6);
