@@ -24,10 +24,19 @@ class Markdown extends React.Component {
   }
   async fetchData() {
     try {
-      let {response} = await qwest.get(this.props.src);
+      let md;
+      if (window.sessionStorage && sessionStorage[this.props.src])
+        md = sessionStorage[this.props.src];
+      else {
+        let xhr = await qwest.get(this.props.src);
+        md = xhr.response;
+        if (window.sessionStorage) {
+          sessionStorage[this.props.src] = md;
+        }
+      }
       this.setState({
         status: STATUS_SUCCESS,
-        html: marked(response).replace(/<code class="/g, '<code class="hljs ')
+        html: marked(md).replace(/<code class="/g, '<code class="hljs ')
       });
     } catch (e) {
       this.setState({
