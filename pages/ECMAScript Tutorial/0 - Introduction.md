@@ -157,7 +157,7 @@ console.log(match);
 ![npm](/assets/img/js-tutorial/npm-09-25.png)
 
 > Any application that can be written in JavaScript, will eventually be written in JavaScript.
-> - Atwood's Law
+> —— Atwood's Law
 >
 > 只要一个软件可以被 JavaScript 实现，这个软件就一定会被 JavaScript 的实现版所取代。
 > —— 马云一定没有说过。
