@@ -31,8 +31,8 @@ let h1 = document.getElementsByTagName('h1')[0]
 ```js
 'use strict'
 let h1 = document.querySelector('h1.html-class-h1#sample')
-h1.innerHTML // a [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString) representing the markup of the element's content.
-h1.classList // a [`DOMTokenList`](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList) containing the list of class attributes.
+h1.innerHTML // a `DOMString` representing the markup of the element's content.
+h1.classList // a `DOMTokenList` containing the list of class attributes.
 ```
 
 具体接口参考 [MDN](https://developer.mozilla.org) 即可。
