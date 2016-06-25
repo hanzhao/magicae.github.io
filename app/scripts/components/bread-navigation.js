@@ -3,7 +3,8 @@ import React from 'react';
 import { Icon, Breadcrumb } from 'amazeui-react';
 
 function getLocation() {
-  return location.hash.substring(1).split('/').filter((s) => s);
+  return location.hash.substring(1).split('/')
+      .filter((s) => s).map(s => s.replace(/%20/g, ' '));
 }
 
 class BreadNavigation extends React.Component {

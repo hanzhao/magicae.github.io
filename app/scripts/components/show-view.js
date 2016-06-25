@@ -10,7 +10,8 @@ const TYPE_DIRECTORY = 1;
 const TYPE_NOT_FOUND = -1;
 
 function getLocation() {
-  return location.hash.substring(1).split('/').filter((s) => s);
+  return location.hash.substring(1).split('/')
+      .filter((s) => s).map(s => s.replace(/%20/g, ' '));
 }
 
 function getType(location) {

@@ -6,6 +6,9 @@ export default {
       "2 - Function and Closure.md": true,
       "3 - Class and Inheritance.md": true,
       "4 - DOM API.md": true
+    },
+    "OpenResty": {
+      "0 - Introduction.md": true
     }
   }
 };
