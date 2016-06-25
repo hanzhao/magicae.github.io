@@ -13,7 +13,7 @@ Web 服务和动态网关。
 
 OpenResty 以 Nginx 的 conf 作为入口。
 
-```
+```lua
 server {
     server_name localhost;
     listen 80 default_server;
@@ -52,7 +52,7 @@ OpenResty 依靠在这几个周期上加 hook 函数来处理 Nginx 对请求的
 以最近写的一个 api 服务器为例。看一个请求的整个执行周期。
 
 nginx.conf
-```
+```lua
 # 模块搜寻路径
 lua_package_path '/srv/server/?.lua;;';
 server {
