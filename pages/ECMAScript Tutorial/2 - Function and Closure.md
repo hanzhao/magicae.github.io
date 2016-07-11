@@ -121,7 +121,7 @@ console.log(multiplyTwo(2, 1))
 console.log(multiplyTwo(2, 1))
 ```
 
-`function multiplyGenerator` 中的 `factor` 不会因为 `multiplyGenerator` 退出而被回收，而是被带出了原本的作用域，外层的 `console.log` 通过 `Function multiply*` 简介地访问到了 `factor` 的值。并且，因为 `multiplyGenerator` 被调用了多次，生成了不同的 `factor`，所以不同的 `Function multiply*` 的 `factor` 之间是相互独立的。
+`function multiplyGenerator` 中的 `factor` 不会因为 `multiplyGenerator` 退出而被回收，而是被带出了原本的作用域，外层的 `console.log` 通过 `Function multiply*` 间接地访问到了 `factor` 的值。并且，因为 `multiplyGenerator` 被调用了多次，生成了不同的 `factor`，所以不同的 `Function multiply*` 的 `factor` 之间是相互独立的。
 
 这东西能用来做什么呢？
 
